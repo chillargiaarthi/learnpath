@@ -1,0 +1,460 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700/50 rounded-2xl;
+  }
+
+  .input {
+    @apply w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-colors;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700 dark:text-slate-300;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2.5 bg-sky-500 hover:bg-sky-400 text-white rounded-xl text-sm font-medium transition-colors;
+  }
+}
+
+.reading {
+  --reading-bg: #f5f0e8;
+  --reading-text: #3d2e1a;
+}
+
+.reading body {
+  background-color: var(--reading-bg);
+  color: var(--reading-text);
+}
+/* Student Dashboard theme support */
+.student-surface {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.student-heading {
+  color: #0f172a;
+}
+
+.student-body {
+  color: #334155;
+}
+
+.student-muted {
+  color: #64748b;
+}
+
+.student-subtle {
+  color: #94a3b8;
+}
+
+.student-progress-track {
+  color: #e2e8f0;
+}
+
+.student-dashboard .student-surface {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark mode - preserve current appearance */
+.dark .student-surface {
+  background-color: rgb(30 41 59 / 0.5);
+  border-color: rgb(51 65 85 / 0.5);
+}
+
+.dark .student-heading {
+  color: #ffffff;
+}
+
+.dark .student-body {
+  color: #cbd5e1;
+}
+
+.dark .student-muted {
+  color: #94a3b8;
+}
+
+.dark .student-subtle {
+  color: #64748b;
+}
+
+.dark .student-progress-track {
+  color: #1e293b;
+}
+
+/* Reading mode */
+.reading .student-surface {
+  background-color: #fffaf0;
+  border-color: #d8cdbb;
+}
+
+.reading .student-heading {
+  color: #3d2e1a;
+}
+
+.reading .student-body {
+  color: #4b3b27;
+}
+
+.reading .student-muted {
+  color: #6b5a43;
+}
+
+.reading .student-subtle {
+  color: #806f58;
+}
+
+.reading .student-progress-track {
+  color: #d8cdbb;
+}
+.reading .student-modal {
+  background-color: #fffaf0;
+  border-color: #d8cdbb;
+}
+.student-modal-heading {
+  color: #0f172a;
+}
+
+.dark .student-modal-heading {
+  color: #ffffff;
+}
+
+.reading .student-modal-heading {
+  color: #3d2e1a;
+}
+/* ================================
+   Student Test Page Theme
+   ================================ */
+
+.test-page {
+  color: #0f172a;
+}
+
+.test-surface {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.test-heading {
+  color: #0f172a;
+}
+
+.test-body {
+  color: #334155;
+}
+
+.test-muted {
+  color: #64748b;
+}
+
+.test-subtle {
+  color: #94a3b8;
+}
+
+.test-input {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.test-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Dark mode */
+.dark .test-page {
+  color: #ffffff;
+}
+
+.dark .test-surface {
+  background-color: rgb(30 41 59 / 0.5);
+  border-color: rgb(51 65 85 / 0.5);
+}
+
+.dark .test-heading {
+  color: #ffffff;
+}
+
+.dark .test-body {
+  color: #cbd5e1;
+}
+
+.dark .test-muted {
+  color: #94a3b8;
+}
+
+.dark .test-subtle {
+  color: #64748b;
+}
+
+.dark .test-input {
+  background-color: rgb(15 23 42 / 0.6);
+  border-color: #475569;
+  color: #ffffff;
+}
+
+.dark .test-input::placeholder {
+  color: #64748b;
+}
+
+/* Reading mode */
+.reading .test-page {
+  color: #3d2e1a;
+}
+
+.reading .test-surface {
+  background-color: #fffaf0;
+  border-color: #d8cdbb;
+}
+
+.reading .test-heading {
+  color: #3d2e1a;
+}
+
+.reading .test-body {
+  color: #4b3b27;
+}
+
+.reading .test-muted {
+  color: #6b5a43;
+}
+
+.reading .test-subtle {
+  color: #806f58;
+}
+
+.reading .test-input {
+  background-color: #fffdf7;
+  border-color: #cdbfa9;
+  color: #3d2e1a;
+}
+
+.reading .test-input::placeholder {
+  color: #806f58;
+}
+.test-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.dark .test-page {
+  background-color: #0f172a;
+}
+
+.reading .test-page {
+  background-color: #f5f0e8;
+}
+.test-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .test-header {
+  background-color: #1e293b;
+  border-bottom-color: #334155;
+}
+
+.reading .test-header {
+  background-color: #fffaf0;
+  border-bottom-color: #d8cdbb;
+}
+.test-option {
+  border-color: #d1d5db;
+  color: #334155;
+}
+
+.test-option:hover {
+  border-color: #94a3b8;
+}
+
+.dark .test-option {
+  border-color: rgb(51 65 85 / 0.5);
+  color: #cbd5e1;
+}
+
+.dark .test-option:hover {
+  border-color: #475569;
+}
+
+.reading .test-option {
+  border-color: #cdbfa9;
+  color: #4b3b27;
+}
+
+.reading .test-option:hover {
+  border-color: #a89579;
+}
+.test-terminated {
+  background-color: #f8fafc;
+}
+
+.dark .test-terminated {
+  background-color: #0f172a;
+}
+
+.reading .test-terminated {
+  background-color: #f5f0e8;
+}
+/* Test MCQ option text visibility */
+.test-option-text {
+  color: #334155;
+}
+
+.dark .test-option-text {
+  color: #e2e8f0;
+}
+
+.reading .test-option-text {
+  color: #4b3b27;
+}
+/* Student Tasks - Request Extension Modal */
+
+.student-modal {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #0f172a;
+}
+
+.student-modal-heading {
+  color: #0f172a;
+}
+
+.student-modal-muted {
+  color: #64748b;
+}
+
+.student-modal-option {
+  border-color: #d1d5db;
+  color: #334155;
+}
+
+.student-modal-option:hover {
+  border-color: #94a3b8;
+}
+
+.student-modal-radio {
+  border-color: #94a3b8;
+}
+
+.student-modal-input {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.student-modal-input::placeholder {
+  color: #94a3b8;
+}
+
+.student-modal-cancel {
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.student-modal-cancel:hover {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+
+/* Dark Mode */
+
+.dark .student-modal {
+  background: #1e293b;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+.dark .student-modal-heading {
+  color: #ffffff;
+}
+
+.dark .student-modal-muted {
+  color: #94a3b8;
+}
+
+.dark .student-modal-option {
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.dark .student-modal-option:hover {
+  border-color: #64748b;
+}
+
+.dark .student-modal-radio {
+  border-color: #64748b;
+}
+
+.dark .student-modal-input {
+  background: #0f172a;
+  border-color: #475569;
+  color: #ffffff;
+}
+
+.dark .student-modal-input::placeholder {
+  color: #64748b;
+}
+
+.dark .student-modal-cancel {
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+.dark .student-modal-cancel:hover {
+  color: #ffffff;
+  background: #334155;
+}
+
+
+/* Reading Mode */
+
+.reading .student-modal {
+  background: #fffaf0;
+  border-color: #d8cdbb;
+  color: #3d2e1a;
+}
+
+.reading .student-modal-heading {
+  color: #3d2e1a;
+}
+
+.reading .student-modal-muted {
+  color: #6b5a43;
+}
+
+.reading .student-modal-option {
+  border-color: #cdbfa9;
+  color: #4b3b27;
+}
+
+.reading .student-modal-option:hover {
+  border-color: #a89579;
+}
+
+.reading .student-modal-radio {
+  border-color: #a89579;
+}
+
+.reading .student-modal-input {
+  background: #fffdf7;
+  border-color: #cdbfa9;
+  color: #3d2e1a;
+}
+
+.reading .student-modal-input::placeholder {
+  color: #806f58;
+}
+
+.reading .student-modal-cancel {
+  border-color: #cdbfa9;
+  color: #6b5a43;
+}
+
+.reading .student-modal-cancel:hover {
+  color: #3d2e1a;
+  background: #f5f0e8;
+}
